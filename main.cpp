@@ -1,7 +1,10 @@
 #include <iostream>
-// Take
 #include "cpu.hpp" 
-
+// Made by Pieter Tschopp
+// FTMS - Fast Terminal Monitoring System is a free-open-source program to moniter your hardware without covering your terminal(I.E. btop, htop, ect.)
+// Modify and change at will. 
+// For any bugs, questions, or suggestions: Contact pietertschopp065@gmail.com.
+// Thanks! And have a good day
 
 
 int main() {
