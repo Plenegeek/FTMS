@@ -1,10 +1,35 @@
 #include "cpu.hpp"
 #include <fstream>
-
+#include <thread>
+#include <chrono>
 
 double cpu_usage() {
-        return 42.0; // Placeholder. Need to work on getting usage correctly
+    std::ifstream file("/proc/stat");
+
+    std::string cpu;
+    long long user, nice, system, idle;
+
+    file >> cpu >> user >> nice >> system >> idle;
+
+    long long idle1 = idle;
+    long long total1 = user + nice + system + idle;
+
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+
+    file.close();
+    file.open("/proc/stat");
+
+    file >> cpu >> user >> nice >> system >> idle;
+
+    long long idle2 = idle;
+    long long total2 = user + nice + system + idle;
+
+    long long total_delta = total2 - total1;
+    long long idle_delta = idle2 - idle1;
+
+    return (double)(total_delta - idle_delta) / total_delta * 100.0;
 }
+
 double cpu_temp() {
 
 
@@ -17,3 +42,5 @@ double cpu_temp() {
 
 }
 // End program
+
+
