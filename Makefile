@@ -1,17 +1,17 @@
 all: ftms
 
 ftms: main.o cpu.o ram.o
-        g++ main.o cpu.o ram.o -o ftms
+	g++ main.o cpu.o ram.o -o ftms
 
 main.o: main.cpp cpu.hpp memory.hpp
-        g++ -c main.cpp -o main.o
+	g++ -c main.cpp -o main.o
 
 cpu.o: cpu.cpp cpu.hpp
-        g++ -c cpu.cpp -o cpu.o
+	g++ -c cpu.cpp -o cpu.o
 
 ram.o: ram.cpp memory.hpp
-        g++ -c ram.cpp -o ram.o
+	g++ -c ram.cpp -o ram.o
 
 clean:
-        rm -f ftms main.o cpu.o ram.o
+	rm -f ftms main.o cpu.o ram.o
 
