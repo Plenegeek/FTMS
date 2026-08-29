@@ -3,7 +3,7 @@ all: ftms
 ftms: main.o cpu.o ram.o
         g++ main.o cpu.o ram.o -o ftms
 
-main.o: main.cpp cpu.hpp
+main.o: main.cpp cpu.hpp memory.hpp
         g++ -c main.cpp -o main.o
 
 cpu.o: cpu.cpp cpu.hpp
