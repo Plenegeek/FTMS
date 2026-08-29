@@ -14,7 +14,7 @@ int main() {
   std::cout << "CPU Usage:      " << cpu_usage() << "%\n";
   std::cout << "CPU Temp:       " << cpu_temp() << "C\n";
   std::cout << "RAM:            " << memory_total() << " GB\n";
-  std::cout << "RAM free:      "  << memory_free() << " GB\n";
+  std::cout << "RAM free:       "  << memory_free() << " GB\n";
   std::cout << "----------------------------------------\n";
         return 0;
 
