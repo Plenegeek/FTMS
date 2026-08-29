@@ -2,7 +2,7 @@ FTMS - Fast Terminal Monitoring System
 
 Want to see your temps and usage without having your whole terminal taken up?
 
-**Version 0.4** Added readout for available RAM
+**Version 0.6** Fixed Makefile tab error and RAM reading issue. 
 
 ## How to run?
 - Make sure that g++ is installed.
