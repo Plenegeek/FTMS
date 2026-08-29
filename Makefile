@@ -14,3 +14,4 @@ ram.o: ram.cpp memory.hpp
 
 clean:
         rm -f ftms main.o cpu.o ram.o
+
