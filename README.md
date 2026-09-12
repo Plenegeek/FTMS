@@ -11,7 +11,7 @@ Changed from working primarly(for FTMS) from my laptop --> to my Raspberry Pi, R
 Also, compiling takes like, 30s, its not THAT BAD, but yk
 **End of Yaps :P**
 
-**Version 0.9** Fixed additional bugs, added CPU Model readout.
+**Version 0.90** Fixed additional bugs, added CPU Model readout.
 
 ## How to run?
 - Make sure that g++ is installed.
