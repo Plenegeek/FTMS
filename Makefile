@@ -1,7 +1,7 @@
 all: ftms
 
-ftms: main.o cpu.o ram.o uptime.o
-	g++ main.o cpu.o ram.o uptime.o -o ftms
+ftms: main.o cpu.o ram.o uptime.o model.o
+	g++ main.o cpu.o ram.o uptime.o model.o -o ftms
 
 main.o: main.cpp cpu.hpp memory.hpp uptime.hpp
 	g++ -c main.cpp -o main.o
@@ -15,5 +15,8 @@ ram.o: ram.cpp memory.hpp
 uptime.o: uptime.cpp uptime.hpp
 	g++ -c uptime.cpp -o uptime.o
 
+model.o: model.cpp model.hpp
+	g++ -c model.cpp -o model.o
+
 clean:
-	rm -f ftms main.o cpu.o ram.o uptime.o
+	rm -f ftms main.o cpu.o ram.o uptime.o model.o 

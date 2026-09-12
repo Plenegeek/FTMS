@@ -2,17 +2,22 @@
 #include "cpu.hpp"
 #include "memory.hpp"
 #include "uptime.hpp"
+#include "model.hpp"
 #include <iomanip>
+
 // Made by Pieter Tschopp
 // FTMS - Fast Terminal Monitoring System is a free-open-source program to moniter your hardware without covering your terminal(I.E. btop, htop, ect.)
 // Modify and change at will.
 // For any bugs, questions, or suggestions: Contact pietertschopp065@gmail.com.
 // Thanks! And have a good day!
+
+
 int main() {
   std::cout << std::fixed << std::setprecision(2);
   std::cout << "-------------------------------------------------------\n";
   std::cout << "FTMS -- Fast Terminal Monitoring System       BY: P.T.\n";
   std::cout << "-------------------------------------------------------\n";
+  std::cout << "CPU Model:      " << model() << "\n";
   std::cout << "CPU Usage:      " << cpu_usage() << "%\n";
   std::cout << "CPU Temp:       " << cpu_temp() << "C\n";
   std::cout << "RAM:            " << memory_total() << " GB\n";
