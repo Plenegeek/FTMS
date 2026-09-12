@@ -2,7 +2,16 @@ FTMS - Fast Terminal Monitoring System
 
 Want to see your temps and usage without having your whole terminal taken up?
 
-**Version 0.7** Added uptime readout. 
+Made by Pieter Tschopp, just a chill 13 Year old coder :)
+
+
+**Yaps**
+Changed from working primarly(for FTMS) from my laptop --> to my Raspberry Pi, Running RP OS Lite, its a 3b BTW :D
+
+Also, compiling takes like, 30s, its not THAT BAD, but yk
+**End of Yaps :P**
+
+**Version 0.8** Fixed bugs, added RAM Used. 
 
 ## How to run?
 - Make sure that g++ is installed.

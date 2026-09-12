@@ -9,14 +9,15 @@
 // For any bugs, questions, or suggestions: Contact pietertschopp065@gmail.com.
 // Thanks! And have a good day!
 int main() {
-    std::cout << std::fixed << std::setprecision(2);
-  std::cout << "-----------------------------------------\n";
-  std::cout << "FTMS -- Fast Terminal Monitoring System\n";
-  std::cout << "-----------------------------------------\n";
+  std::cout << std::fixed << std::setprecision(2);
+  std::cout << "-------------------------------------------------------\n";
+  std::cout << "FTMS -- Fast Terminal Monitoring System       BY: P.T.\n";
+  std::cout << "-------------------------------------------------------\n";
   std::cout << "CPU Usage:      " << cpu_usage() << "%\n";
   std::cout << "CPU Temp:       " << cpu_temp() << "C\n";
   std::cout << "RAM:            " << memory_total() << " GB\n";
   std::cout << "RAM free:       "  << memory_free() << " GB\n";
+  std::cout << "RAM Used:       " << memory_total() - memory_free() << " GB\n";
     double uptime = get_uptime();
 
     int days = static_cast<int>(uptime / 86400);
@@ -28,7 +29,7 @@ int main() {
               << hours << " Hour(s) "
               << minutes << " Minute(s)\n";
 
-    std::cout << "-----------------------------------------\n";
+    std::cout << "------------------------------------------------------\n";
 
         return 0;
 }
