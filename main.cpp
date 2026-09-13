@@ -11,18 +11,17 @@
 // For any bugs, questions, or suggestions: Contact pietertschopp065@gmail.com.
 // Thanks! And have a good day!
 
-
 int main() {
   std::cout << std::fixed << std::setprecision(2);
-  std::cout << "-------------------------------------------------------\n";
-  std::cout << "FTMS -- Fast Terminal Monitoring System       BY: P.T.\n";
-  std::cout << "-------------------------------------------------------\n";
-  std::cout << "CPU Model: " << model() << "\n";
-  std::cout << "CPU Usage: " << cpu_usage() << "%	";
-  std::cout << "CPU Temp:  " << cpu_temp() << "C\n";
-  std::cout << "RAM:       " << memory_total() << " GB	";
-  std::cout << "RAM free   " << memory_free() << " GB\n";
-  std::cout << "RAM Used:  " << memory_total() - memory_free() << " GB\n";
+  std::cout << "───────────────────────────────────────────────────────\n";
+  std::cout << "FTMS - Fast Terminal Monitoring System         \033[36mBY: P.T.\033[0m\n";
+  std::cout << "───────────────────────────────────────────────────────\n";
+  std::cout << "CPU Model: \033[32m" << model() << "\033[0m\n";
+  std::cout << "CPU Usage: \033[32m" << cpu_usage() << "%	\033[0m";
+  std::cout << "CPU Temp:  \033[32m" << cpu_temp() << "C\033[0m\n";
+  std::cout << "RAM:       \033[32m" << memory_total() << " GB	\033[0m";
+  std::cout << "RAM free   \033[32m" << memory_free() << " GB\033[0m\n";
+  std::cout << "RAM Used:  \033[32m" << memory_total() - memory_free() << " GB\033[0m\n";
     double uptime = get_uptime();
 
     int days = static_cast<int>(uptime / 86400);
@@ -34,7 +33,7 @@ int main() {
               << hours << " Hour(s) "
               << minutes << " Minute(s)\n";
 
-    std::cout << "------------------------------------------------------\n";
-
+    std::cout << "───────────────────────────────────────────────────────\n";
         return 0;
 }
+
