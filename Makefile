@@ -1,22 +1,33 @@
-all: ftms
+CXX = g++
+CXXFLAGS = -Iinclude
 
-ftms: main.o cpu.o ram.o uptime.o model.o
-	g++ main.o cpu.o ram.o uptime.o model.o -o ftms
+TARGET = ftms
 
-main.o: main.cpp cpu.hpp memory.hpp uptime.hpp
-	g++ -c main.cpp -o main.o
+OBJECTS = build/main.o \
+	build/cpu.o \
+	build/ram.o \
+	build/uptime.o \
+	build/model.o \
 
-cpu.o: cpu.cpp cpu.hpp
-	g++ -c cpu.cpp -o cpu.o
+all: $(TARGET)
 
-ram.o: ram.cpp memory.hpp
-	g++ -c ram.cpp -o ram.o
+$(TARGET): $(OBJECTS)
+	$(CXX) $(OBJECTS) -o $(TARGET)
 
-uptime.o: uptime.cpp uptime.hpp
-	g++ -c uptime.cpp -o uptime.o
+build/main.o: main.cpp include/cpu.hpp include/memory.hpp include/uptime.hpp include/model.hpp
+	$(CXX) $(CXXFLAGS) -c main.cpp -o build/main.o
 
-model.o: model.cpp model.hpp
-	g++ -c model.cpp -o model.o
+build/cpu.o: src/cpu.cpp include/cpu.hpp
+	$(CXX) $(CXXFLAGS) -c src/cpu.cpp -o build/cpu.o
+
+build/ram.o: src/ram.cpp include/memory.hpp
+	$(CXX) $(CXXFLAGS) -c src/ram.cpp -o build/ram.o
+
+build/uptime.o: src/uptime.cpp include/uptime.hpp
+	$(CXX) $(CXXFLAGS) -c src/uptime.cpp -o build/uptime.o
+
+build/model.o: src/model.cpp include/model.hpp
+	$(CXX) $(CXXFLAGS) -c src/model.cpp -o build/model.o
 
 clean:
-	rm -f ftms main.o cpu.o ram.o uptime.o model.o 
+	rm -f $(TARGET) build/*.o
