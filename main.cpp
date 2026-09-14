@@ -16,7 +16,7 @@ int main() {
   std::cout << "───────────────────────────────────────────────────────\n";
   std::cout << "FTMS - Fast Terminal Monitoring System         \033[36mBY: P.T.\033[0m\n";
   std::cout << "───────────────────────────────────────────────────────\n";
-  std::cout << "CPU Model: \033[32m" << model() << "\033[0m\n";
+  std::cout << "           \033[32m" << model() << "\033[0m\n";
   std::cout << "CPU Usage: \033[32m" << cpu_usage() << "%	\033[0m";
   std::cout << "CPU Temp:  \033[32m" << cpu_temp() << "C\033[0m\n";
   std::cout << "RAM:       \033[32m" << memory_total() << " GB	\033[0m";
