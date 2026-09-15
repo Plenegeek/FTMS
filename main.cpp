@@ -3,6 +3,7 @@
 #include "memory.hpp"
 #include "uptime.hpp"
 #include "model.hpp"
+#include "location.hpp"
 #include <iomanip>
 
 // Made by Pieter Tschopp
@@ -32,7 +33,7 @@ int main() {
               << days << " Day(s) "
               << hours << " Hour(s) "
               << minutes << " Minute(s)\n";
-
+   std::cout << "Location:  \033[32m" << location() << "\033[0m";
     std::cout << "───────────────────────────────────────────────────────\n";
         return 0;
 }

@@ -8,13 +8,14 @@ OBJECTS = build/main.o \
 	build/ram.o \
 	build/uptime.o \
 	build/model.o \
+	build/location.o
 
 all: $(TARGET)
 
 $(TARGET): $(OBJECTS)
 	$(CXX) $(OBJECTS) -o $(TARGET)
 
-build/main.o: main.cpp include/cpu.hpp include/memory.hpp include/uptime.hpp include/model.hpp
+build/main.o: main.cpp include/location.hpp include/cpu.hpp include/memory.hpp include/uptime.hpp include/model.hpp
 	$(CXX) $(CXXFLAGS) -c main.cpp -o build/main.o
 
 build/cpu.o: src/cpu.cpp include/cpu.hpp
@@ -28,6 +29,9 @@ build/uptime.o: src/uptime.cpp include/uptime.hpp
 
 build/model.o: src/model.cpp include/model.hpp
 	$(CXX) $(CXXFLAGS) -c src/model.cpp -o build/model.o
+
+build/location.o: src/location.cpp include/location.hpp
+	$(CXX) $(CXXFLAGS) -c src/location.cpp -o build/location.o
 
 clean:
 	rm -f $(TARGET) build/*.o

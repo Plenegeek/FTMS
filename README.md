@@ -11,7 +11,7 @@ Changed from working primarly(for FTMS) from my laptop --> to my Raspberry Pi, R
 Also, compiling takes like, 30s, its not THAT BAD, but yk
 **End of Yaps :P**
 
-**Version 0.9.4** Changed the format of the CPU model centering. - 9.14.26
+**Version 0.9.6** Added location readout. - 9.15.26
 
 ## How to run?
 - Make sure that g++ is installed.
