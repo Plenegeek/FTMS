@@ -15,7 +15,7 @@
 int main() {
   std::cout << std::fixed << std::setprecision(2);
   std::cout << "───────────────────────────────────────────────────────\n";
-  std::cout << "FTMS - Fast Terminal Monitoring System         \033[36mBY: P.T.\033[0m\n";
+  std::cout << "\033[034mFTMS - Fast Terminal Monitoring System\033[0m         \033[36mBY: P.T.\033[0m\n";
   std::cout << "───────────────────────────────────────────────────────\n";
   std::cout << "           \033[32m" << model() << "\033[0m\n";
   std::cout << "CPU Usage: \033[32m" << cpu_usage() << "%		\033[0m";
@@ -37,4 +37,7 @@ int main() {
     std::cout << "───────────────────────────────────────────────────────\n";
         return 0;
 }
+
+
+
 

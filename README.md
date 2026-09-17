@@ -1,6 +1,7 @@
 FTMS - Fast Terminal Monitoring System
 
 Want to see your temps and usage without having your whole terminal taken up?
+Mostly for small/unpowerful systems.
 
 Made by Pieter Tschopp, just a chill 13 Year old coder :)
 
